@@ -63,7 +63,6 @@ public class StudentController {
         return ResponseEntity.status(HttpStatus.CREATED).body(studentService.addMultipleStudents(students));
     }
 
-
     @PutMapping(path = "/{id}")
     public ResponseEntity<?> updateStudentById(@PathVariable Long id, @RequestBody Student student) {
         log.info("Student's data successfully updated");

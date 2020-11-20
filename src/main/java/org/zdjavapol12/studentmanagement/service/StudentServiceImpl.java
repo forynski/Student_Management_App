@@ -12,7 +12,7 @@ import java.util.Map;
 
 @Service
 @Scope("singleton")
-public class StudentServiceImpl {
+public class StudentServiceImpl implements StudentService {
 
     private final Map<Long, Student> studentMap = new HashMap<>();
     private Long nextId = 1L;
@@ -44,7 +44,7 @@ public class StudentServiceImpl {
     }
 
     @Override
-    public Student updateStudentById(Long id, Student student) {
+    public Student updateStudent(Long id, Student student) {
         if (studentMap.containsKey(id)) {
             if (student.getFirstName() != null) {
                 studentMap.get(id).setFirstName(student.getFirstName());
