@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Student {
     private Long id;
+    private Long indexNumber;
     private String firstName;
     private String lastName;
     private String fieldOfStudy;
