@@ -1,6 +1,5 @@
 package org.zdjavapol12.studentmanagement.service;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.zdjavapol12.studentmanagement.model.Student;
 
@@ -11,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-@Scope("singleton")
 public class StudentServiceImpl implements StudentService {
 
     private final Map<Long, Student> studentMap = new HashMap<>();
