@@ -51,11 +51,18 @@ public class StudentController {
         }
     }
 
+    @PostMapping
+    public ResponseEntity<?> addStudent(@RequestBody Student student) {
+        log.info("Student successfully added");
+        return ResponseEntity.status(HttpStatus.CREATED).body(studentService.addStudent(student));
+    }
+
     @PostMapping(path = "/multiple")
     public ResponseEntity<?> addStudent(@RequestBody List<Student> students) {
         log.info("All students successfully added");
         return ResponseEntity.status(HttpStatus.CREATED).body(studentService.addMultipleStudents(students));
     }
+
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<?> updateStudentById(@PathVariable Long id, @RequestBody Student student) {
