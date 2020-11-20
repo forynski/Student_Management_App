@@ -6,15 +6,15 @@ import java.util.List;
 
 public interface StudentService {
 
-    Student getStudentByIndexNumber(Long indexNumber);
+    Student getStudentById(Long id);
 
-    List<Student> getAllStudents;
+    List<Student> getAllStudents();
 
-    boolean deleteStudentByIndexNumber(Long indexNumber);
+    boolean deleteStudentById(Long id);
 
     Student addStudent(Student student);
 
-    Student updateStudent(Long indexNumber, Student student);
+    Student updateStudent(Long id, Student student);
 
     List<Student> addMultipleStudents(List<Student> students);
 }

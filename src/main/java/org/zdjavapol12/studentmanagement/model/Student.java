@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Student {
-    private Long indexNumber;
+    private Long id;
     private String firstName;
     private String lastName;
     private String fieldOfStudy;
